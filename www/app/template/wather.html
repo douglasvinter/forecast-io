@@ -1,0 +1,45 @@
+<b>Hourly weather forecast, {{data.hourly.data.length}} updates</b>
+<br />
+
+<div style="overflow: scroll; height: 150px;">
+
+  <div ng-repeat="weather in data.hourly.data">
+    <br />
+    <b>Time: </b>{{weather.time | date:'h:mma'}}
+    <br />
+    <b>Summary: </b>{{weather.summary}}
+    <br />
+    <b>Max. Temp: </b>{{weather.apparentTemperatureMax}} F
+    <br />
+    <b>Min. Temp: </b>{{weather.apparentTemperatureMin}} F
+    <br />
+    <b>UV Index: </b>{{weather.uvIndex}}
+    <br />
+    <b>Wind speed: </b>{{weather.windSpeed}} mph
+  </div>
+</div>
+
+<br />
+
+<b>Weekly weather forecast</b>
+
+<br />
+
+<div style="overflow: scroll; height: 150px;">
+
+  <div ng-repeat="weather in data.daily.data">
+    <br />
+    <b>Time: </b>{{weather.time | date}}
+    <br />
+    <b>Summary: </b>{{weather.summary}}
+    <br />
+    <b>Max. Temp: </b>{{weather.apparentTemperatureMax}} F
+    <br />
+    <b>Min. Temp: </b>{{weather.apparentTemperatureMin}} F
+    <br />
+    <b>UV Index: </b>{{weather.uvIndex}}
+    <br />
+    <b>Wind speed: </b>{{weather.windSpeed}} mph
+  </div>
+
+</div>
